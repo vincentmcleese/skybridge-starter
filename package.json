@@ -1,0 +1,27 @@
+{
+  "name": "skybridge-starter",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Skybridge Starter Template for ChatGPT Apps",
+  "type": "module",
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "dev": "pnpm --filter @skybridge-starter/server dev",
+    "build": "pnpm web:build && rm -rf server/dist && pnpm --filter=@skybridge-starter/server --prod deploy server/dist && cp -r web/dist server/dist/assets && pnpm --filter=@skybridge-starter/server build",
+    "start": "pnpm server:start",
+    "inspector": "pnpm --filter @skybridge-starter/server inspector",
+    "server:build": "pnpm --filter @skybridge-starter/server build",
+    "server:start": "pnpm --filter @skybridge-starter/server start",
+    "web:build": "pnpm --filter @skybridge-starter/web build",
+    "web:preview": "pnpm --filter @skybridge-starter/web preview"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
+    "prettier": "^3.5.3",
+    "prettier-eslint": "^16.4.2",
+    "tsx": "^4.19.4",
+    "typescript-eslint": "^8.32.0"
+  }
+}
