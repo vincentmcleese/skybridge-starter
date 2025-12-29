@@ -31,7 +31,7 @@
 Before writing ANY widget or server code, thoroughly reference:
 
 ```
-@skybridge-agent-docs.md
+@agent-resources/skybridge-agent-docs.md
 ```
 
 This documentation contains:
@@ -40,11 +40,27 @@ This documentation contains:
 - Best practices and anti-patterns
 - Type inference with `generateHelpers`
 
+### When Creating or Modifying Widget UI
+
+Always follow the OpenAI design guidelines:
+
+```
+@agent-resources/openai-design-guidelines.md
+```
+
+This documentation contains:
+- Color palette for light and dark modes
+- Spacing scale and layout rules
+- Component guidelines (buttons, cards, dividers)
+- Icon library reference
+- Accessibility requirements
+
 ### When Writing New Code
 
 1. **Check the docs first** - Is there a hook or pattern for what you need?
-2. **Follow existing patterns** - Look at how similar features are implemented
-3. **Ask if unsure** - If a pattern seems new or undocumented, ask the user
+2. **Follow design guidelines** - Use system colors, spacing, and icons
+3. **Follow existing patterns** - Look at how similar features are implemented
+4. **Ask if unsure** - If a pattern seems new or undocumented, ask the user
 
 ---
 
