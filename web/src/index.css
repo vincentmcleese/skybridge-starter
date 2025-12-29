@@ -74,6 +74,20 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* OpenAI Design Tokens - Light Mode */
+  --oai-bg-primary: #FFFFFF;
+  --oai-bg-secondary: #E8E8E8;
+  --oai-bg-tertiary: #F3F3F3;
+  --oai-text-primary: #0D0D0D;
+  --oai-text-secondary: #5D5D5D;
+  --oai-text-tertiary: #8F8F8F;
+  --oai-icon-primary: #0D0D0D;
+  --oai-icon-secondary: #5D5D5D;
+  --oai-accent-blue: #0285FF;
+  --oai-accent-red: #E82E2A;
+  --oai-accent-orange: #E26507;
+  --oai-accent-green: #0B8535;
 }
 
 .dark {
@@ -108,6 +122,20 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* OpenAI Design Tokens - Dark Mode */
+  --oai-bg-primary: #212121;
+  --oai-bg-secondary: #303030;
+  --oai-bg-tertiary: #414141;
+  --oai-text-primary: #FFFFFF;
+  --oai-text-secondary: #CDCDCD;
+  --oai-text-tertiary: #AFAFAF;
+  --oai-icon-primary: #FFFFFF;
+  --oai-icon-secondary: #CDCDCD;
+  --oai-accent-blue: #0285FF;
+  --oai-accent-red: #FF8583;
+  --oai-accent-orange: #FF9E6C;
+  --oai-accent-green: #68C977;
 }
 
 @layer base {

@@ -68,14 +68,27 @@ skybridge-starter/
 │       ├── server.ts     # MCP tools and widgets
 │       ├── middleware.ts # MCP transport handler
 │       └── env.ts        # Environment config
-└── web/
-    └── src/
-        ├── widgets/      # React widget components
-        │   └── hello.tsx # Example widget
-        ├── helpers.ts    # Skybridge type helpers
-        ├── utils.ts      # Utility functions
-        └── index.css     # Tailwind + theme CSS
+├── web/
+│   └── src/
+│       ├── widgets/      # React widget components
+│       │   └── hello.tsx # Example widget
+│       ├── icons/        # Reusable icon components
+│       │   └── index.tsx # SVG icons as React components
+│       ├── helpers.ts    # Skybridge type helpers
+│       ├── utils.ts      # Utility functions
+│       └── index.css     # Tailwind + theme CSS
+├── agent-resources/      # AI agent reference (see note below)
+└── AGENTS.md             # AI agent instructions (see note below)
 ```
+
+### Agent Resources (Safe to Delete)
+
+The following files are **for AI coding agents only** and are **not required** for the app to build or run:
+
+- `agent-resources/` - Design guidelines, icon reference library, and framework docs
+- `AGENTS.md` - Instructions for AI coding assistants
+
+These files help AI agents understand the project and follow best practices, but they are **not bundled** with your production build. You can safely delete them if you're not using AI coding tools, or keep them for future AI-assisted development.
 
 ## Adding New Features
 
@@ -155,7 +168,8 @@ This:
 
 ## Resources
 
-- [Skybridge Agent Docs](../skybridge-agent-docs.md) - Full framework documentation
+- [Skybridge Agent Docs](agent-resources/skybridge-agent-docs.md) - Full framework documentation
+- [OpenAI Design Guidelines](agent-resources/openai-design-guidelines.md) - UI/UX guidelines for ChatGPT Apps
 - [OpenAI Apps SDK](https://developers.openai.com/apps-sdk)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 

@@ -190,6 +190,33 @@ System iconography provides visual clarity, while partner logos and images help 
 
 This repository includes a curated icon set in `agent-resources/Iconography/`. Prioritize these icons for ChatGPT Apps when a relevant icon can be found. Each filename describes the icon's purpose.
 
+**IMPORTANT: Do not import directly from `agent-resources/Iconography/`**
+
+The `agent-resources/` folder is a reference for AI agents and documentation only. It is **not bundled with the app** and may be deleted in production builds.
+
+#### How to Use Icons
+
+1. Find the icon you need in `agent-resources/Iconography/`
+2. Copy the SVG path data into a React component in `web/src/icons/index.tsx`
+3. Use `fill="currentColor"` so the icon inherits text color
+4. Export and import from `../icons` in your widgets
+
+Example:
+
+```tsx
+// In web/src/icons/index.tsx
+export function MyIcon({ className, size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className}>
+      <path d="..." fill="currentColor" />
+    </svg>
+  );
+}
+
+// In your widget
+import { MyIcon } from "../icons";
+```
+
 #### Critical Icons
 
 | Icon | File | Usage |
@@ -248,7 +275,8 @@ This repository includes a curated icon set in `agent-resources/Iconography/`. P
 
 ### Contrast Requirements
 
-- **Text and Background:** Minimum WCAG AA contrast ratio (4.5:1 for normal text, 3:1 for large text) Don’t apply colors to backgrounds in text areas.
+- **Text and Background:** Minimum WCAG AA contrast ratio (4.5:1 for normal text, 3:1 for large text) 
+- **Don’t apply colors to backgrounds in text areas**
 - **Interactive Elements:** Minimum 3:1 contrast ratio
 - **Focus States:** Clearly visible focus indicators
 
