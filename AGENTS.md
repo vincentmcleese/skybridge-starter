@@ -183,3 +183,29 @@ const { callTool, isPending, data } = useCallTool("other-tool");
 callTool({ arg1: "value" });
 ```
 
+---
+
+## MCP Tool Annotations
+
+**When registering tools with `.registerTool()`, always include annotations.**
+
+Annotations describe a tool's behavior to ChatGPT (read-only, destructive, external API calls). They are required for app submission.
+
+```typescript
+.registerTool("my-tool", {
+  description: "What the tool does",
+  inputSchema: { /* ... */ },
+  annotations: {
+    readOnlyHint: true,      // Only reads, no writes
+    openWorldHint: false,    // No external API calls
+    destructiveHint: false,  // Doesn't delete anything
+  },
+}, async (args) => { /* ... */ })
+```
+
+For the full guide with decision trees and justification templates:
+
+```
+@agent-resources/MCP-ANNOTATIONS.md
+```
+
